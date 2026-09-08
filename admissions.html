@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Aspire Colleges Narrowal Campus</title>
+    <meta name="description" content="Admission process, requirements, and important dates for Aspire Colleges Narrowal Campus">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="default">
+    <!-- Theme Selector -->
+    <button class="theme-toggle-btn" id="themeToggleBtn">
+        <i class="fas fa-palette"></i>
+    </button>
+    <div class="theme-selector" id="themeSelector">
+        <h3>Select Theme</h3>
+        <div class="theme-colors">
+            <div class="theme-color default active" data-theme="default"></div>
+            <div class="theme-color dark" data-theme="dark"></div>
+            <div class="theme-color blue" data-theme="blue"></div>
+            <div class="theme-color purple" data-theme="purple"></div>
+            <div class="theme-color gold" data-theme="gold"></div>
+            <div class="theme-color red" data-theme="red"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-main">Aspire Colleges</div>
+                    <div class="logo-sub">Narrowal Campus</div>
+                </div>
+            </a>
+
+
+
+
+
+ <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-icon">
+                <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                </svg>
+            </div>
+            <input type="text" class="search-input" id="searchInput" placeholder="Search programs, admissions, faculty..." autocomplete="off">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <!-- Mobile Search Toggle -->
+        <button class="search-toggle" id="searchToggle">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+            </svg>
+        </button>
+
+
+
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-links" id="navLinks">
+                  <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="campus.html" class="nav-link">Our Campuses </a></li>
+                    <li><a href="programs.html" class="nav-link">Programmes</a></li>
+                    <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                    <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="lifeatcampus.html" class="nav-link">Life At campus</a></li>
+                     <li><a href="news-events.html" class="nav-link">News & Events</a></li>
+                     <li><a href="seed.html" class="nav-link">SEED</a></li>
+                     <li><a href="careers.html" class="nav-link">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <!-- Hero Section -->
+        <section class="hero admissions-hero">
+            <div class="container">
+                <div class="hero-content animate-fade-in">
+                    <h1>Admissions 2024</h1>
+                    <p>Begin your journey towards academic excellence. Apply now for the upcoming academic session.</p>
+                    <div class="hero-btns">
+                        <a href="#admission-process" class="btn btn-large animate-fade-in delay-1">
+                            <i class="fas fa-file-alt"></i> Admission Process
+                        </a>
+                        <a href="#apply-now" class="btn btn-outline btn-large animate-fade-in delay-2">
+                            <i class="fas fa-edit"></i> Apply Online
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Info Banner -->
+        <section class="info-banner">
+            <div class="container">
+                <div class="info-banner-content">
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <h3>Admission Deadline</h3>
+                            <p>August 15, 2024</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Classes Start</h3>
+                            <p>September 1, 2024</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-question-circle"></i>
+                        <div>
+                            <h3>Need Help?</h3>
+                            <p>Contact: 042-1234567</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admission Process -->
+        <section id="admission-process" class="section-padding">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Admission Process</h2>
+                    <p class="section-subtitle">Follow these simple steps to secure your admission</p>
+                </div>
+
+                <div class="process-steps">
+                    <div class="process-step animate-fade-in">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>Application Submission</h3>
+                            <p>Fill out the online application form or submit a physical form at the campus admission office. Ensure all required documents are attached.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step animate-fade-in delay-1">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>Entrance Test</h3>
+                            <p>Appear for the college entrance test. Test dates will be communicated after application submission. Preparation guidelines will be provided.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step animate-fade-in delay-2">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>Interview</h3>
+                            <p>Shortlisted candidates will be called for an interview with the admission committee. This helps us understand your academic goals and aspirations.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step animate-fade-in">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>Fee Submission</h3>
+                            <p>Upon selection, submit the admission fee within the given timeframe to confirm your seat. Payment plans and scholarships available.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Offered -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Programs Offered</h2>
+                    <p class="section-subtitle">Choose from our comprehensive range of academic programs</p>
+                </div>
+
+                <div class="admission-programs">
+                    <div class="program-card animate-fade-in">
+                        <div class="program-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3>Pre-Medical (FSc)</h3>
+                        <ul>
+                            <li>Biology, Chemistry, Physics</li>
+                            <li>Duration: 2 Years</li>
+                            <li>Eligibility: Matric Science</li>
+                            <li>Seats: 150</li>
+                        </ul>
+                        <a href="programs.html#pre-medical" class="btn btn-small">Learn More</a>
+                    </div>
+
+                    <div class="program-card animate-fade-in delay-1">
+                        <div class="program-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Pre-Engineering (FSc)</h3>
+                        <ul>
+                            <li>Mathematics, Chemistry, Physics</li>
+                            <li>Duration: 2 Years</li>
+                            <li>Eligibility: Matric Science</li>
+                            <li>Seats: 120</li>
+                        </ul>
+                        <a href="programs.html#pre-engineering" class="btn btn-small">Learn More</a>
+                    </div>
+
+                    <div class="program-card animate-fade-in delay-2">
+                        <div class="program-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Computer Science (ICS)</h3>
+                        <ul>
+                            <li>Computer Science, Mathematics, Physics</li>
+                            <li>Duration: 2 Years</li>
+                            <li>Eligibility: Matric Science/Arts</li>
+                            <li>Seats: 100</li>
+                        </ul>
+                        <a href="programs.html#computer-science" class="btn btn-small">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requirements -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Admission Requirements</h2>
+                    <p class="section-subtitle">Documents and qualifications needed for admission</p>
+                </div>
+
+                <div class="requirements-grid">
+                    <div class="requirement-card animate-fade-in">
+                        <div class="requirement-header">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Academic Documents</h3>
+                        </div>
+                        <ul>
+                            <li>Matriculation Marksheet (Original + 2 copies)</li>
+                            <li>Matriculation Certificate</li>
+                            <li>Character Certificate from previous institution</li>
+                            <li>Migration Certificate (if applicable)</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement-card animate-fade-in delay-1">
+                        <div class="requirement-header">
+                            <i class="fas fa-id-card"></i>
+                            <h3>Personal Documents</h3>
+                        </div>
+                        <ul>
+                            <li>4 Recent passport-size photographs</li>
+                            <li>Student's B-Form/CNIC (copy)</li>
+                            <li>Father's/Guardian's CNIC (copy)</li>
+                            <li>Domicile Certificate (copy)</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement-card animate-fade-in delay-2">
+                        <div class="requirement-header">
+                            <i class="fas fa-file-contract"></i>
+                            <h3>Additional Requirements</h3>
+                        </div>
+                        <ul>
+                            <li>Admission Form (duly filled)</li>
+                            <li>Affidavit on stamp paper (as per format)</li>
+                            <li>Medical Fitness Certificate</li>
+                            <li>Blood Group Report</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fee Structure -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Fee Structure 2024</h2>
+                    <p class="section-subtitle">Transparent and affordable fee structure for all programs</p>
+                </div>
+
+                <div class="fee-table-container">
+                    <table class="fee-table animate-fade-in">
+                        <thead>
+                            <tr>
+                                <th>Program</th>
+                                <th>Admission Fee</th>
+                                <th>Monthly Tuition</th>
+                                <th>Annual Charges</th>
+                                <th>Total Annual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pre-Medical</td>
+                                <td>Rs. 15,000</td>
+                                <td>Rs. 4,500</td>
+                                <td>Rs. 10,000</td>
+                                <td>Rs. 73,000</td>
+                            </tr>
+                            <tr>
+                                <td>Pre-Engineering</td>
+                                <td>Rs. 15,000</td>
+                                <td>Rs. 4,500</td>
+                                <td>Rs. 10,000</td>
+                                <td>Rs. 73,000</td>
+                            </tr>
+                            <tr>
+                                <td>Computer Science</td>
+                                <td>Rs. 12,000</td>
+                                <td>Rs. 4,000</td>
+                                <td>Rs. 8,000</td>
+                                <td>Rs. 64,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="scholarship-info animate-fade-in">
+                    <h3><i class="fas fa-award"></i> Scholarship Opportunities</h3>
+                    <div class="scholarship-grid">
+                        <div class="scholarship-item">
+                            <h4>Merit Scholarship</h4>
+                            <p>90%+ marks in Matric: 50% tuition fee waiver</p>
+                        </div>
+                        <div class="scholarship-item">
+                            <h4>Sibling Scholarship</h4>
+                            <p>20% discount for siblings studying together</p>
+                        </div>
+                        <div class="scholarship-item">
+                            <h4>Sports Scholarship</h4>
+                            <p>For national/provincial level athletes</p>
+                        </div>
+                        <div class="scholarship-item">
+                            <h4>Need-Based Scholarship</h4>
+                            <p>For deserving students from low-income families</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Online Application -->
+        <section id="apply-now" class="section-padding">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Online Application</h2>
+                    <p class="section-subtitle">Apply for admission from the comfort of your home</p>
+                </div>
+
+                <div class="application-form-container animate-fade-in">
+                    <form id="admissionForm" class="application-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fatherName">Father's Name *</label>
+                                <input type="text" id="fatherName" name="fatherName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cnic">CNIC/B-Form Number *</label>
+                                <input type="text" id="cnic" name="cnic" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="program">Program Choice *</label>
+                                <select id="program" name="program" required>
+                                    <option value="">Select Program</option>
+                                    <option value="pre-medical">Pre-Medical (FSc)</option>
+                                    <option value="pre-engineering">Pre-Engineering (FSc)</option>
+                                    <option value="computer-science">Computer Science (ICS)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Permanent Address *</label>
+                            <textarea id="address" name="address" rows="3" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="previousEducation">Previous Education Details *</label>
+                            <textarea id="previousEducation" name="previousEducation" rows="3" required placeholder="School/College Name, Board, Year, Marks"></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the terms and conditions of admission</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-large">
+                            <i class="fas fa-paper-plane"></i> Submit Application
+                        </button>
+                    </form>
+
+                    <div class="form-note">
+                        <p><i class="fas fa-info-circle"></i> After online submission, you'll need to visit the campus with original documents for verification within 7 days.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Find answers to common admission queries</p>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item animate-fade-in">
+                        <button class="faq-question">
+                            <span>What is the last date for admission?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The admission deadline for the 2024 academic session is August 15, 2024. Late admissions may be considered on a case-by-case basis, subject to seat availability.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item animate-fade-in">
+                        <button class="faq-question">
+                            <span>Is there an entrance test for admission?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, all applicants must appear for an entrance test. The test evaluates basic concepts in Mathematics, English, and Science. Test dates are scheduled weekly during the admission period.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item animate-fade-in">
+                        <button class="faq-question">
+                            <span>Are scholarships available?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we offer various scholarships including merit-based, need-based, sports, and sibling scholarships. Details are available in the scholarship section above.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item animate-fade-in">
+                        <button class="faq-question">
+                            <span>What is the hostel facility situation?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We have separate hostel facilities for boys and girls with limited capacity. Hostel admission is separate from academic admission and is subject to availability.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item animate-fade-in">
+                        <button class="faq-question">
+                            <span>Can I apply if I'm from a different board?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, students from all Pakistani educational boards are eligible to apply. You will need to provide a migration certificate from your previous board.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="logo-text">
+                            <div class="logo-main">Aspire Colleges</div>
+                            <div class="logo-sub">Narrowal Campus</div>
+                        </div>
+                    </div>
+                    <p class="footer-description">Excellence in education since 1995. Committed to nurturing future leaders through quality education and modern teaching methodologies.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="campus.html">Campus Map</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Main GT Road, Narrowal, Punjab, Pakistan</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+92 300 1234567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@aspirecolleges.edu.pk</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Fri: 8:00 AM - 4:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Admission Office</h3>
+                    <p>For admission queries:</p>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>Admission Helpline: 042-1234567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>admissions@aspirecolleges.edu.pk</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Office Hours: 9AM - 3PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aspire Colleges Narrowal Campus. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

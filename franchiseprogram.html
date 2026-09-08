@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franchise Program - Aspire Colleges Narrowal</title>
+    <meta name="description" content="Join Aspire Colleges Franchise Program - Become a partner in educational excellence with proven success model.">
+    <meta name="keywords" content="aspire colleges franchise, education franchise, school franchise, college franchise, educational partnership">
+    <meta name="author" content="Aspire Colleges Narrowal">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Franchise Program Specific Styles */
+        :root {
+            --primary-color: #0a4d68;
+            --secondary-color: #088395;
+            --accent-color: #b40808;
+            --gold-color: #dfad3e;
+            --light-bg: #f8f9fa;
+            --dark-color: #333;
+            --text-color: #555;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+        
+        .logo-icon {
+            font-size: 32px;
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 1;
+            color: var(--primary-color);
+        }
+        
+        .logo-sub {
+            font-size: 12px;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--accent-color);
+        }
+        
+        .nav-link.active:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .franchise-hero {
+            background: linear-gradient(rgba(10, 77, 104, 0.9), rgba(10, 77, 104, 0.8)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .franchise-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .franchise-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--accent-color);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: #8a0606;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(180, 8, 8, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+        
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--accent-color);
+        }
+        
+        .btn-large {
+            padding: 18px 40px;
+            font-size: 18px;
+        }
+        
+        /* Section Common Styles */
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Franchise Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid var(--accent-color);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 32px;
+            color: var(--accent-color);
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Investment Section */
+        .investment-section {
+            background: var(--light-bg);
+        }
+        
+        .investment-plans {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .plan-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .plan-card.popular {
+            border: 2px solid var(--gold-color);
+            transform: scale(1.05);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--gold-color);
+            color: var(--white);
+            padding: 5px 30px;
+            transform: rotate(45deg);
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .plan-name {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .plan-price {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .plan-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .plan-features li i {
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+        
+        /* Process Section */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            position: relative;
+        }
+        
+        .process-steps:before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--border-color);
+            z-index: 1;
+        }
+        
+        .process-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 25px;
+            border: 5px solid var(--white);
+        }
+        
+        .step-content {
+            padding: 0 15px;
+        }
+        
+        .step-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        /* Requirements */
+        .requirements-list {
+            max-width: 800px;
+            margin: 50px auto 0;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .requirements-list ul {
+            list-style: none;
+        }
+        
+        .requirements-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .requirements-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .requirements-list li i {
+            color: var(--accent-color);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        /* Contact Form */
+        .contact-form-section {
+            background: var(--light-bg);
+        }
+        
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-about h3,
+        .footer-links h3,
+        .footer-contact h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        
+        .footer-contact p {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            margin-top: 3px;
+            color: var(--gold-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+        
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .back-to-top.show {
+            display: flex;
+        }
+        
+        .back-to-top:hover {
+            background: #8a0606;
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .process-steps {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .process-steps:before {
+                display: none;
+            }
+            
+            .process-step {
+                display: flex;
+                align-items: flex-start;
+                text-align: left;
+            }
+            
+            .step-number {
+                margin: 0 20px 0 0;
+                flex-shrink: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s ease;
+                z-index: 999;
+            }
+            
+            .nav-links.show {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            .franchise-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-container {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .franchise-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .benefits-grid,
+            .investment-plans {
+                grid-template-columns: 1fr;
+            }
+            
+            .plan-card.popular {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-main">Aspire Colleges</div>
+                    <div class="logo-sub">Narrowal Campus</div>
+                </div>
+            </a>
+
+
+
+
+
+ <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-icon">
+                <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                </svg>
+            </div>
+            <input type="text" class="search-input" id="searchInput" placeholder="Search programs, admissions, faculty..." autocomplete="off">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <!-- Mobile Search Toggle -->
+        <button class="search-toggle" id="searchToggle">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+            </svg>
+        </button>
+
+
+
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="programs.html" class="nav-link">Programs</a></li>
+                    <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                    <li><a href="franchiseprogram.html" class="nav-link">Franchise Program</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="lifeatcampus.html" class="nav-link">Life At campus</a></li>
+                     <li><a href="news-events.html" class="nav-link">News & Events</a></li>
+                     <li><a href="seed.html" class="nav-link">SEED</a></li>
+                     <li><a href="careers.html" class="nav-link">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="franchise-hero">
+        <div class="container">
+            <h1>Join Our Franchise Program</h1>
+            <p>Become a partner in educational excellence with Aspire Colleges' proven success model. Build a prestigious educational institution in your city with our comprehensive support system.</p>
+            <div style="display: flex; gap: 15px; justify-content: center; margin-top: 30px;">
+                <a href="#contact-form" class="btn btn-large">Apply for Franchise</a>
+                <a href="#investment" class="btn btn-large btn-outline">View Investment Plans</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Franchise With Us -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Aspire Colleges Franchise?</h2>
+                <p class="section-subtitle">Join Pakistan's fastest growing educational network with 18+ years of proven success</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Proven Business Model</h3>
+                    <p>Successfully tested and implemented across multiple locations with consistent results and profitability.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Brand Recognition</h3>
+                    <p>Leverage our established reputation as a premier educational institution with 95% success rate.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Complete Curriculum</h3>
+                    <p>Access to our comprehensive, board-approved curriculum and teaching methodologies.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Training & Support</h3>
+                    <p>Comprehensive training for staff and ongoing operational support from our expert team.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Marketing Support</h3>
+                    <p>Complete marketing package including digital marketing, admission campaigns, and branding materials.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Exclusive Territory</h3>
+                    <p>Protected territory rights ensuring no competition from other franchisees in your area.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section id="investment" class="section-padding investment-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Investment Plans</h2>
+                <p class="section-subtitle">Choose the franchise package that suits your investment capacity and business goals</p>
+            </div>
+            
+            <div class="investment-plans">
+                <div class="plan-card">
+                    <h3 class="plan-name">Silver Package</h3>
+                    <div class="plan-price">₹2.5M</div>
+                    <p>For small cities with population under 500,000</p>
+                    
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Basic branding & signage</li>
+                        <li><i class="fas fa-check"></i> Curriculum access</li>
+                        <li><i class="fas fa-check"></i> Initial staff training</li>
+                        <li><i class="fas fa-check"></i> Operations manual</li>
+                        <li><i class="fas fa-check"></i> 6 months support</li>
+                    </ul>
+                    
+                    <a href="#contact-form" class="btn">Enquire Now</a>
+                </div>
+                
+                <div class="plan-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3 class="plan-name">Gold Package</h3>
+                    <div class="plan-price">₹4.5M</div>
+                    <p>For medium cities with population 500,000-1M</p>
+                    
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Everything in Silver</li>
+                        <li><i class="fas fa-check"></i> Complete branding package</li>
+                        <li><i class="fas fa-check"></i> Marketing campaign support</li>
+                        <li><i class="fas fa-check"></i> Admission software</li>
+                        <li><i class="fas fa-check"></i> 12 months ongoing support</li>
+                        <li><i class="fas fa-check"></i> Site selection assistance</li>
+                    </ul>
+                    
+                    <a href="#contact-form" class="btn">Enquire Now</a>
+                </div>
+                
+                <div class="plan-card">
+                    <h3 class="plan-name">Platinum Package</h3>
+                    <div class="plan-price">₹7.5M</div>
+                    <p>For major cities with population over 1M</p>
+                    
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Everything in Gold</li>
+                        <li><i class="fas fa-check"></i> Premium location support</li>
+                        <li><i class="fas fa-check"></i> Digital marketing package</li>
+                        <li><i class="fas fa-check"></i> Complete admission system</li>
+                        <li><i class="fas fa-check"></i> 24 months premium support</li>
+                        <li><i class="fas fa-check"></i> Business development training</li>
+                    </ul>
+                    
+                    <a href="#contact-form" class="btn">Enquire Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Franchise Process -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Franchise Process</h2>
+                <p class="section-subtitle">Simple 5-step process to start your Aspire Colleges franchise</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Initial Enquiry</h3>
+                        <p>Submit franchise enquiry form with basic details</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Meeting & Discussion</h3>
+                        <p>Personal meeting with franchise team</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Location Approval</h3>
+                        <p>Site visit and location approval process</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Agreement & Training</h3>
+                        <p>Sign franchise agreement and staff training</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Launch & Operations</h3>
+                        <p>Campus setup and start of operations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="section-padding" style="background: var(--light-bg);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Franchise Requirements</h2>
+                <p class="section-subtitle">Basic requirements to qualify for Aspire Colleges franchise</p>
+            </div>
+            
+            <div class="requirements-list">
+                <ul>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Educational Background:</strong> Minimum Bachelor's degree (preferably in Education or Management)
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Business Experience:</strong> Previous business or management experience preferred
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Financial Capability:</strong> Adequate financial resources for investment and working capital
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Property Requirements:</strong> Minimum 5,000 sq. ft. property in good location
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Commitment:</strong> Full-time commitment to the franchise business
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Passion for Education:</strong> Genuine interest in quality education and community development
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact-form" class="section-padding contact-form-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Apply for Franchise</h2>
+                <p class="section-subtitle">Fill out the form below and our franchise team will contact you within 24 hours</p>
+            </div>
+            
+            <div class="form-container">
+                <form id="franchiseApplicationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="qualification">Highest Qualification *</label>
+                            <select id="qualification" class="form-control" required>
+                                <option value="">Select Qualification</option>
+                                <option value="bachelor">Bachelor's Degree</option>
+                                <option value="master">Master's Degree</option>
+                                <option value="phd">PhD</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Business Experience (Years) *</label>
+                            <select id="experience" class="form-control" required>
+                                <option value="">Select Experience</option>
+                                <option value="0-2">0-2 Years</option>
+                                <option value="2-5">2-5 Years</option>
+                                <option value="5-10">5-10 Years</option>
+                                <option value="10+">10+ Years</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="investment">Preferred Investment Plan *</label>
+                            <select id="investment" class="form-control" required>
+                                <option value="">Select Plan</option>
+                                <option value="silver">Silver Package (₹2.5M)</option>
+                                <option value="gold">Gold Package (₹4.5M)</option>
+                                <option value="platinum">Platinum Package (₹7.5M)</option>
+                                <option value="not-sure">Not Sure - Need Guidance</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="property">Do you have property for college?</label>
+                            <select id="property" class="form-control">
+                                <option value="">Select Option</option>
+                                <option value="yes-owned">Yes, I own property</option>
+                                <option value="yes-rented">Yes, I have rented property</option>
+                                <option value="no">No, need assistance</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" class="form-control" placeholder="Tell us about your background, interest in education, and any specific questions..."></textarea>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 30px;">
+                        <button type="submit" class="btn" style="width: 100%; padding: 16px; font-size: 18px;">
+                            <i class="fas fa-paper-plane"></i> Submit Franchise Application
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Aspire Colleges</h3>
+                    <p style="margin-top: 15px; opacity: 0.8;">Premier educational institution committed to nurturing future leaders through academic excellence, character building, and holistic development.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="franchiseprogram.html">Franchise Program</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Franchise Contact</h3>
+                    <p><i class="fas fa-phone-alt"></i> +92 42 1234567 (Ext. 5)</p>
+                    <p><i class="fas fa-envelope"></i> franchise@aspirecolleges.edu.pk</p>
+                    <p><i class="fas fa-map-marker-alt"></i> College Road, Near Narrowal Bypass</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Aspire Colleges Narrowal Campus. All Rights Reserved.</p>
+                <p style="margin-top: 10px;">Franchise Program - Building Educational Excellence Nationwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('show');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navLinks = document.getElementById('navLinks');
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            
+            if (navLinks.classList.contains('show') && 
+                !navLinks.contains(event.target) && 
+                !mobileBtn.contains(event.target)) {
+                navLinks.classList.remove('show');
+            }
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form Submission
+        document.getElementById('franchiseApplicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                city: document.getElementById('city').value,
+                qualification: document.getElementById('qualification').value,
+                experience: document.getElementById('experience').value,
+                investment: document.getElementById('investment').value,
+                property: document.getElementById('property').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Here you would typically send the data to a server
+            // For now, we'll show a success message
+            alert('Thank you for your franchise application! Our team will contact you within 24 hours.');
+            
+            // Reset form
+            this.reset();
+            
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Programs - Aspire Colleges Narrowal Campus</title>
+    <meta name="description" content="Explore our comprehensive academic programs at Aspire Colleges Narrowal Campus. Pre-Medical, Pre-Engineering, Computer Science and more.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="default">
+    <!-- Theme Selector -->
+    <button class="theme-toggle-btn" id="themeToggleBtn">
+        <i class="fas fa-palette"></i>
+    </button>
+    <div class="theme-selector" id="themeSelector">
+        <h3>Select Theme</h3>
+        <div class="theme-colors">
+            <div class="theme-color default active" data-theme="default"></div>
+            <div class="theme-color dark" data-theme="dark"></div>
+            <div class="theme-color blue" data-theme="blue"></div>
+            <div class="theme-color purple" data-theme="purple"></div>
+            <div class="theme-color gold" data-theme="gold"></div>
+            <div class="theme-color red" data-theme="red"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-main">Aspire Colleges</div>
+                    <div class="logo-sub">Narrowal Campus</div>
+                </div>
+            </a>
+
+
+
+
+
+
+
+ <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-icon">
+                <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                </svg>
+            </div>
+            <input type="text" class="search-input" id="searchInput" placeholder="Search programs, admissions, faculty..." autocomplete="off">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <!-- Mobile Search Toggle -->
+        <button class="search-toggle" id="searchToggle">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+            </svg>
+        </button>
+
+
+
+
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-links" id="navLinks">
+                   <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="campus.html" class="nav-link">Our Campuses </a></li>
+                    <li><a href="programs.html" class="nav-link">Programmes</a></li>
+                    <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                    <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="lifeatcampus.html" class="nav-link">Life At campus</a></li>
+                     <li><a href="news-events.html" class="nav-link">News & Events</a></li>
+                     <li><a href="seed.html" class="nav-link">SEED</a></li>
+                     <li><a href="careers.html" class="nav-link">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <!-- Hero Section -->
+        <section class="hero programs-hero">
+            <div class="container">
+                <div class="hero-content animate-fade-in">
+                    <h1>Academic Programs</h1>
+                    <p>Explore our comprehensive range of academic programs designed to prepare students for successful careers in medicine, engineering, and technology.</p>
+                    <div class="hero-btns">
+                        <a href="#programs-list" class="btn btn-large animate-fade-in delay-1">
+                            <i class="fas fa-book-open"></i> View Programs
+                        </a>
+                        <a href="#curriculum" class="btn btn-outline btn-large animate-fade-in delay-2">
+                            <i class="fas fa-clipboard-list"></i> Curriculum
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Overview -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Our Academic Programs</h2>
+                    <p class="section-subtitle">Comprehensive education pathways for aspiring professionals</p>
+                </div>
+
+                <!-- Program Stats -->
+                <div class="program-stats animate-fade-in">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>3</h3>
+                            <p>Main Programs</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>2 Years</h3>
+                            <p>Program Duration</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>500+</h3>
+                            <p>Students Enrolled</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>95%</h3>
+                            <p>Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs List -->
+        <section id="programs-list" class="section-padding bg-light">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Program Details</h2>
+                    <p class="section-subtitle">Detailed information about each academic program</p>
+                </div>
+
+                <!-- Pre-Medical Program -->
+                <div id="pre-medical" class="program-detail-card animate-fade-in">
+                    <div class="program-header">
+                        <div class="program-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="program-title">
+                            <h3>Pre-Medical (FSc)</h3>
+                            <p class="program-subtitle">Biology, Chemistry, Physics</p>
+                        </div>
+                        <span class="program-badge">Most Popular</span>
+                    </div>
+                    
+                    <div class="program-content">
+                        <div class="program-info">
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Duration:</strong>
+                                    <p>2 Years (4 Semesters)</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <strong>Seats Available:</strong>
+                                    <p>150 per batch</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <strong>Eligibility:</strong>
+                                    <p>Matric Science with Biology</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-book"></i>
+                                <div>
+                                    <strong>Credit Hours:</strong>
+                                    <p>Total 1100 marks</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="program-description">
+                            <h4>Program Overview</h4>
+                            <p>The Pre-Medical program is designed for students aspiring to pursue careers in medical fields. Our comprehensive curriculum covers advanced concepts in Biology, Chemistry, and Physics, preparing students for medical entrance exams and university education.</p>
+                            
+                            <h4>Career Pathways</h4>
+                            <ul class="career-list">
+                                <li>MBBS (Bachelor of Medicine, Bachelor of Surgery)</li>
+                                <li>BDS (Bachelor of Dental Surgery)</li>
+                                <li>Pharmacy (Doctor of Pharmacy)</li>
+                                <li>Biotechnology</li>
+                                <li>Physiotherapy</li>
+                                <li>Nursing</li>
+                            </ul>
+
+                            <div class="program-features">
+                                <h4>Key Features</h4>
+                                <div class="features-grid">
+                                    <div class="feature">
+                                        <i class="fas fa-flask"></i>
+                                        <span>Modern Labs</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-stethoscope"></i>
+                                        <span>Medical Camps</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-chalkboard-teacher"></i>
+                                        <span>Expert Faculty</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-book-medical"></i>
+                                        <span>Research Projects</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="program-footer">
+                        <a href="admissions.html#apply-now" class="btn">
+                            <i class="fas fa-edit"></i> Apply Now
+                        </a>
+                        <a href="#curriculum-premedical" class="btn btn-outline">
+                            <i class="fas fa-download"></i> Download Syllabus
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pre-Engineering Program -->
+                <div id="pre-engineering" class="program-detail-card animate-fade-in delay-1">
+                    <div class="program-header">
+                        <div class="program-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="program-title">
+                            <h3>Pre-Engineering (FSc)</h3>
+                            <p class="program-subtitle">Mathematics, Chemistry, Physics</p>
+                        </div>
+                        <span class="program-badge">High Demand</span>
+                    </div>
+                    
+                    <div class="program-content">
+                        <div class="program-info">
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Duration:</strong>
+                                    <p>2 Years (4 Semesters)</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <strong>Seats Available:</strong>
+                                    <p>120 per batch</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <strong>Eligibility:</strong>
+                                    <p>Matric Science with Mathematics</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-book"></i>
+                                <div>
+                                    <strong>Credit Hours:</strong>
+                                    <p>Total 1100 marks</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="program-description">
+                            <h4>Program Overview</h4>
+                            <p>The Pre-Engineering program prepares students for engineering and technology careers. With a strong emphasis on Mathematics, Physics, and Chemistry, students develop analytical and problem-solving skills essential for engineering disciplines.</p>
+                            
+                            <h4>Career Pathways</h4>
+                            <ul class="career-list">
+                                <li>Civil Engineering</li>
+                                <li>Electrical Engineering</li>
+                                <li>Mechanical Engineering</li>
+                                <li>Computer Engineering</li>
+                                <li>Chemical Engineering</li>
+                                <li>Architecture</li>
+                            </ul>
+
+                            <div class="program-features">
+                                <h4>Key Features</h4>
+                                <div class="features-grid">
+                                    <div class="feature">
+                                        <i class="fas fa-cogs"></i>
+                                        <span>Engineering Labs</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-project-diagram"></i>
+                                        <span>Project Work</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <span>CAD Training</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-industry"></i>
+                                        <span>Industry Visits</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="program-footer">
+                        <a href="admissions.html#apply-now" class="btn">
+                            <i class="fas fa-edit"></i> Apply Now
+                        </a>
+                        <a href="#curriculum-preengineering" class="btn btn-outline">
+                            <i class="fas fa-download"></i> Download Syllabus
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Computer Science Program -->
+                <div id="computer-science" class="program-detail-card animate-fade-in delay-2">
+                    <div class="program-header">
+                        <div class="program-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="program-title">
+                            <h3>Computer Science (ICS)</h3>
+                            <p class="program-subtitle">Computer Science, Mathematics, Physics</p>
+                        </div>
+                        <span class="program-badge">Future Ready</span>
+                    </div>
+                    
+                    <div class="program-content">
+                        <div class="program-info">
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Duration:</strong>
+                                    <p>2 Years (4 Semesters)</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <strong>Seats Available:</strong>
+                                    <p>100 per batch</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <strong>Eligibility:</strong>
+                                    <p>Matric Science/Arts with Mathematics</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-book"></i>
+                                <div>
+                                    <strong>Credit Hours:</strong>
+                                    <p>Total 1100 marks</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="program-description">
+                            <h4>Program Overview</h4>
+                            <p>The Computer Science program equips students with fundamental knowledge in programming, software development, and computer systems. This program is ideal for students interested in technology, software engineering, and IT careers.</p>
+                            
+                            <h4>Career Pathways</h4>
+                            <ul class="career-list">
+                                <li>Software Engineering</li>
+                                <li>Computer Science</li>
+                                <li>Information Technology</li>
+                                <li>Data Science</li>
+                                <li>Cyber Security</li>
+                                <li>Web Development</li>
+                            </ul>
+
+                            <div class="program-features">
+                                <h4>Key Features</h4>
+                                <div class="features-grid">
+                                    <div class="feature">
+                                        <i class="fas fa-desktop"></i>
+                                        <span>Computer Labs</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-code"></i>
+                                        <span>Coding Workshops</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-database"></i>
+                                        <span>Database Training</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-network-wired"></i>
+                                        <span>Networking Labs</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="program-footer">
+                        <a href="admissions.html#apply-now" class="btn">
+                            <i class="fas fa-edit"></i> Apply Now
+                        </a>
+                        <a href="#curriculum-computer" class="btn btn-outline">
+                            <i class="fas fa-download"></i> Download Syllabus
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum Section -->
+        <section id="curriculum" class="section-padding">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Curriculum Structure</h2>
+                    <p class="section-subtitle">Detailed semester-wise breakdown of courses</p>
+                </div>
+
+                <div class="curriculum-tabs animate-fade-in">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="premedical">Pre-Medical</button>
+                        <button class="tab-button" data-tab="preengineering">Pre-Engineering</button>
+                        <button class="tab-button" data-tab="computer">Computer Science</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- Pre-Medical Curriculum -->
+                        <div id="curriculum-premedical" class="tab-pane active">
+                            <h3>Pre-Medical Curriculum</h3>
+                            <div class="semester-plan">
+                                <div class="semester">
+                                    <h4>First Year</h4>
+                                    <div class="semester-courses">
+                                        <div class="course">
+                                            <strong>Biology Part-I</strong>
+                                            <span>110 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Chemistry Part-I</strong>
+                                            <span>85 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Physics Part-I</strong>
+                                            <span>85 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>English Part-I</strong>
+                                            <span>100 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Urdu Part-I</strong>
+                                            <span>100 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Islamiat/Ethics</strong>
+                                            <span>50 Marks</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="semester">
+                                    <h4>Second Year</h4>
+                                    <div class="semester-courses">
+                                        <div class="course">
+                                            <strong>Biology Part-II</strong>
+                                            <span>110 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Chemistry Part-II</strong>
+                                            <span>85 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Physics Part-II</strong>
+                                            <span>85 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>English Part-II</strong>
+                                            <span>100 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Pakistan Studies</strong>
+                                            <span>50 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Practical</strong>
+                                            <span>225 Marks</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pre-Engineering Curriculum -->
+                        <div id="curriculum-preengineering" class="tab-pane">
+                            <h3>Pre-Engineering Curriculum</h3>
+                            <div class="semester-plan">
+                                <div class="semester">
+                                    <h4>First Year</h4>
+                                    <div class="semester-courses">
+                                        <div class="course">
+                                            <strong>Mathematics Part-I</strong>
+                                            <span>110 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Chemistry Part-I</strong>
+                                            <span>85 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Physics Part-I</strong>
+                                            <span>85 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>English Part-I</strong>
+                                            <span>100 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Urdu Part-I</strong>
+                                            <span>100 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Islamiat/Ethics</strong>
+                                            <span>50 Marks</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="semester">
+                                    <h4>Second Year</h4>
+                                    <div class="semester-courses">
+                                        <div class="course">
+                                            <strong>Mathematics Part-II</strong>
+                                            <span>110 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Chemistry Part-II</strong>
+                                            <span>85 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Physics Part-II</strong>
+                                            <span>85 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>English Part-II</strong>
+                                            <span>100 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Pakistan Studies</strong>
+                                            <span>50 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Practical</strong>
+                                            <span>225 Marks</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Computer Science Curriculum -->
+                        <div id="curriculum-computer" class="tab-pane">
+                            <h3>Computer Science Curriculum</h3>
+                            <div class="semester-plan">
+                                <div class="semester">
+                                    <h4>First Year</h4>
+                                    <div class="semester-courses">
+                                        <div class="course">
+                                            <strong>Computer Science Part-I</strong>
+                                            <span>110 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Mathematics Part-I</strong>
+                                            <span>110 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Physics Part-I</strong>
+                                            <span>85 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>English Part-I</strong>
+                                            <span>100 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Urdu Part-I</strong>
+                                            <span>100 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Islamiat/Ethics</strong>
+                                            <span>50 Marks</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="semester">
+                                    <h4>Second Year</h4>
+                                    <div class="semester-courses">
+                                        <div class="course">
+                                            <strong>Computer Science Part-II</strong>
+                                            <span>110 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Mathematics Part-II</strong>
+                                            <span>110 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Physics Part-II</strong>
+                                            <span>85 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>English Part-II</strong>
+                                            <span>100 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Pakistan Studies</strong>
+                                            <span>50 Marks</span>
+                                        </div>
+                                        <div class="course">
+                                            <strong>Practical</strong>
+                                            <span>225 Marks</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Program Facilities</h2>
+                    <p class="section-subtitle">State-of-the-art facilities supporting academic excellence</p>
+                </div>
+
+                <div class="facilities-grid">
+                    <div class="facility-card animate-fade-in">
+                        <div class="facility-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Science Laboratories</h3>
+                        <p>Modern, well-equipped labs for Physics, Chemistry, and Biology with latest equipment and safety measures.</p>
+                        <ul class="facility-list">
+                            <li>Physics Lab (2 units)</li>
+                            <li>Chemistry Lab (3 units)</li>
+                            <li>Biology Lab (2 units)</li>
+                        </ul>
+                    </div>
+
+                    <div class="facility-card animate-fade-in delay-1">
+                        <div class="facility-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>Computer Labs</h3>
+                        <p>Three computer labs with latest hardware and software for programming and computer science courses.</p>
+                        <ul class="facility-list">
+                            <li>80+ Computers</li>
+                            <li>High-speed Internet</li>
+                            <li>Programming Software</li>
+                        </ul>
+                    </div>
+
+                    <div class="facility-card animate-fade-in delay-2">
+                        <div class="facility-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Library Resources</h3>
+                        <p>Extensive collection of textbooks, reference materials, and digital resources for all programs.</p>
+                        <ul class="facility-list">
+                            <li>10,000+ Books</li>
+                            <li>Digital Library</li>
+                            <li>Study Rooms</li>
+                        </ul>
+                    </div>
+
+                    <div class="facility-card animate-fade-in">
+                        <div class="facility-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Smart Classrooms</h3>
+                        <p>Technology-enabled classrooms with multimedia projectors, sound systems, and interactive boards.</p>
+                        <ul class="facility-list">
+                            <li>Interactive Boards</li>
+                            <li>Audio-Visual Systems</li>
+                            <li>WiFi Enabled</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Guidance -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Career Guidance & Support</h2>
+                    <p class="section-subtitle">Comprehensive support for students' future careers</p>
+                </div>
+
+                <div class="career-support">
+                    <div class="support-card animate-fade-in">
+                        <div class="support-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>University Admissions</h3>
+                        <p>Guidance and support for university applications, entry tests, and admission procedures.</p>
+                    </div>
+
+                    <div class="support-card animate-fade-in delay-1">
+                        <div class="support-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Test Preparation</h3>
+                        <p>Specialized coaching for MDCAT, ECAT, and other entrance examinations.</p>
+                    </div>
+
+                    <div class="support-card animate-fade-in delay-2">
+                        <div class="support-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Career Counseling</h3>
+                        <p>One-on-one counseling sessions to help students choose the right career path.</p>
+                    </div>
+
+                    <div class="support-card animate-fade-in">
+                        <div class="support-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Industry Linkages</h3>
+                        <p>Connections with universities and industries for better career opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Comparison -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Program Comparison</h2>
+                    <p class="section-subtitle">Compare our programs to make an informed decision</p>
+                </div>
+
+                <div class="comparison-table animate-fade-in">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Pre-Medical</th>
+                                <th>Pre-Engineering</th>
+                                <th>Computer Science</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Main Subjects</td>
+                                <td>Biology, Chemistry, Physics</td>
+                                <td>Mathematics, Chemistry, Physics</td>
+                                <td>Computer Science, Mathematics, Physics</td>
+                            </tr>
+                            <tr>
+                                <td>Career Focus</td>
+                                <td>Medical Fields</td>
+                                <td>Engineering Fields</td>
+                                <td>IT & Technology</td>
+                            </tr>
+                            <tr>
+                                <td>Entry Tests</td>
+                                <td>MDCAT, NTS</td>
+                                <td>ECAT, NTS</td>
+                                <td>NTS, University Tests</td>
+                            </tr>
+                            <tr>
+                                <td>Lab Requirements</td>
+                                <td>Biology & Chemistry Labs</td>
+                                <td>Physics & Chemistry Labs</td>
+                                <td>Computer Labs</td>
+                            </tr>
+                            <tr>
+                                <td>Future Scope</td>
+                                <td>MBBS, BDS, Pharmacy</td>
+                                <td>Engineering, Architecture</td>
+                                <td>CS, IT, Software Eng.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="logo-text">
+                            <div class="logo-main">Aspire Colleges</div>
+                            <div class="logo-sub">Narrowal Campus</div>
+                        </div>
+                    </div>
+                    <p class="footer-description">Excellence in education since 1995. Committed to nurturing future leaders through quality education and modern teaching methodologies.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="campus.html">Campus Map</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Programs</h3>
+                    <ul class="footer-links">
+                        <li><a href="programs.html#pre-medical">Pre-Medical</a></li>
+                        <li><a href="programs.html#pre-engineering">Pre-Engineering</a></li>
+                        <li><a href="programs.html#computer-science">Computer Science</a></li>
+                        <li><a href="admissions.html#fee-structure">Fee Structure</a></li>
+                        <li><a href="admissions.html#scholarships">Scholarships</a></li>
+                        <li><a href="faculty.html">Department Heads</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Main GT Road, Narrowal, Punjab, Pakistan</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+92 300 1234567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@aspirecolleges.edu.pk</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Fri: 8:00 AM - 4:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aspire Colleges Narrowal Campus. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

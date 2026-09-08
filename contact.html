@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Aspire Colleges Narrowal Campus</title>
+    <meta name="description" content="Get in touch with Aspire Colleges Narrowal Campus. Contact information, location, and inquiry form.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="default">
+    <!-- Theme Selector -->
+    <button class="theme-toggle-btn" id="themeToggleBtn">
+        <i class="fas fa-palette"></i>
+    </button>
+    <div class="theme-selector" id="themeSelector">
+        <h3>Select Theme</h3>
+        <div class="theme-colors">
+            <div class="theme-color default active" data-theme="default"></div>
+            <div class="theme-color dark" data-theme="dark"></div>
+            <div class="theme-color blue" data-theme="blue"></div>
+            <div class="theme-color purple" data-theme="purple"></div>
+            <div class="theme-color gold" data-theme="gold"></div>
+            <div class="theme-color red" data-theme="red"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-main">Aspire Colleges</div>
+                    <div class="logo-sub">Narrowal Campus</div>
+                </div>
+            </a>
+
+
+
+
+
+ <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-icon">
+                <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                </svg>
+            </div>
+            <input type="text" class="search-input" id="searchInput" placeholder="Search programs, admissions, faculty..." autocomplete="off">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <!-- Mobile Search Toggle -->
+        <button class="search-toggle" id="searchToggle">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+            </svg>
+        </button>
+
+
+
+
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="campus.html" class="nav-link">Our Campuses </a></li>
+                    <li><a href="programs.html" class="nav-link">Programmes</a></li>
+                    <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                    <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="lifeatcampus.html" class="nav-link">Life At campus</a></li>
+                     <li><a href="news-events.html" class="nav-link">News & Events</a></li>
+                     <li><a href="seed.html" class="nav-link">SEED</a></li>
+                     <li><a href="careers.html" class="nav-link">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <!-- Hero Section -->
+        <section class="hero contact-hero">
+            <div class="container">
+                <div class="hero-content animate-fade-in">
+                    <h1>Contact Us</h1>
+                    <p>We're here to help. Reach out to us for any queries, feedback, or information you need.</p>
+                    <div class="hero-btns">
+                        <a href="#contact-form" class="btn btn-large animate-fade-in delay-1">
+                            <i class="fas fa-envelope"></i> Send Message
+                        </a>
+                        <a href="#location" class="btn btn-outline btn-large animate-fade-in delay-2">
+                            <i class="fas fa-map-marker-alt"></i> Visit Campus
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Contact Info -->
+        <section class="quick-contact">
+            <div class="container">
+                <div class="contact-info-grid">
+                    <div class="contact-info-card animate-fade-in">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Our Location</h3>
+                        <p>Main GT Road, Narrowal<br>Punjab, Pakistan</p>
+                        <a href="#location" class="contact-link">View on Map <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="contact-info-card animate-fade-in delay-1">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Phone Numbers</h3>
+                        <p>Main Office: 042-1234567<br>Admissions: 042-7654321</p>
+                        <a href="tel:+92421234567" class="contact-link">Call Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="contact-info-card animate-fade-in delay-2">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Address</h3>
+                        <p>info@aspirecolleges.edu.pk<br>admissions@aspirecolleges.edu.pk</p>
+                        <a href="mailto:info@aspirecolleges.edu.pk" class="contact-link">Email Us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="contact-info-card animate-fade-in">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Office Hours</h3>
+                        <p>Mon - Fri: 8:00 AM - 4:00 PM<br>Sat: 9:00 AM - 1:00 PM</p>
+                        <a href="#visit" class="contact-link">Plan Visit <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form & Info -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Contact Form -->
+                    <div id="contact-form" class="contact-form-container animate-fade-in">
+                        <div class="section-title">
+                            <h2>Send Us a Message</h2>
+                            <p class="section-subtitle">Fill out the form below and we'll get back to you as soon as possible</p>
+                        </div>
+
+                        <form id="inquiryForm" class="inquiry-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactName">Full Name *</label>
+                                    <input type="text" id="contactName" name="contactName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactEmail">Email Address *</label>
+                                    <input type="email" id="contactEmail" name="contactEmail" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactPhone">Phone Number *</label>
+                                    <input type="tel" id="contactPhone" name="contactPhone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactSubject">Subject *</label>
+                                    <select id="contactSubject" name="contactSubject" required>
+                                        <option value="">Select Subject</option>
+                                        <option value="admission">Admission Inquiry</option>
+                                        <option value="academic">Academic Information</option>
+                                        <option value="fee">Fee Structure</option>
+                                        <option value="scholarship">Scholarship</option>
+                                        <option value="feedback">Feedback/Suggestion</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactMessage">Your Message *</label>
+                                <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Subscribe to our newsletter for updates</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-large">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-details animate-fade-in delay-1">
+                        <div class="section-title">
+                            <h2>Get In Touch</h2>
+                            <p class="section-subtitle">Multiple ways to reach us</p>
+                        </div>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h3>Call Us</h3>
+                                    <p>Feel free to call us during office hours</p>
+                                    <div class="phone-numbers">
+                                        <a href="tel:+92421234567">042-1234567</a>
+                                        <a href="tel:+923001234567">0300-1234567</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h3>Email Us</h3>
+                                    <p>Send us an email for detailed inquiries</p>
+                                    <div class="email-addresses">
+                                        <a href="mailto:info@aspirecolleges.edu.pk">info@aspirecolleges.edu.pk</a>
+                                        <a href="mailto:admissions@aspirecolleges.edu.pk">admissions@aspirecolleges.edu.pk</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h3 id="visit">Visit Campus</h3>
+                                    <p>Come visit us at our campus location</p>
+                                    <address>
+                                        Main GT Road, Narrowal<br>
+                                        District Gujranwala<br>
+                                        Punjab, Pakistan
+                                    </address>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h3>Office Hours</h3>
+                                    <p>Our office hours for visitors</p>
+                                    <div class="timings">
+                                        <div class="timing-item">
+                                            <span>Monday - Friday:</span>
+                                            <span>8:00 AM - 4:00 PM</span>
+                                        </div>
+                                        <div class="timing-item">
+                                            <span>Saturday:</span>
+                                            <span>9:00 AM - 1:00 PM</span>
+                                        </div>
+                                        <div class="timing-item">
+                                            <span>Sunday:</span>
+                                            <span>Closed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-contact">
+                            <h3>Connect With Us</h3>
+                            <p>Follow us on social media for updates and announcements</p>
+                            <div class="social-links-large">
+                                <a href="#" class="social-link facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="#" class="social-link twitter">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="#" class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="#" class="social-link linkedin">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="#" class="social-link youtube">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>YouTube</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Map -->
+        <section id="location" class="location-section">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Our Location</h2>
+                    <p class="section-subtitle">Find us easily with the map and directions below</p>
+                </div>
+
+                <div class="map-container animate-fade-in">
+                    <!-- Embedded Google Map -->
+                    <div class="map-placeholder">
+                        <div class="map-overlay">
+                            <h3><i class="fas fa-map-marker-alt"></i> Aspire Colleges Narrowal Campus</h3>
+                            <p>Main GT Road, Near Narrowal Bypass, Gujranwala District</p>
+                            <a href="https://maps.google.com/?q=Aspire+Colleges+Narrowal+Campus" target="_blank" class="btn btn-small">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </a>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Campus Location Map">
+                    </div>
+                </div>
+
+                <div class="directions-info animate-fade-in">
+                    <div class="direction-card">
+                        <div class="direction-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div>
+                            <h3>By Car</h3>
+                            <p>Located on Main GT Road, 15km from Gujranwala City. Ample parking available on campus.</p>
+                        </div>
+                    </div>
+
+                    <div class="direction-card">
+                        <div class="direction-icon">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <div>
+                            <h3>By Public Transport</h3>
+                            <p>Regular bus service from Gujranwala, Wazirabad, and surrounding areas. Get off at Narrowal Bypass.</p>
+                        </div>
+                    </div>
+
+                    <div class="direction-card">
+                        <div class="direction-icon">
+                            <i class="fas fa-taxi"></i>
+                        </div>
+                        <div>
+                            <h3>By Taxi/Ride Share</h3>
+                            <p>Available from all major locations. Use "Aspire Colleges Narrowal" as destination.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Departments Contact -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Department Contacts</h2>
+                    <p class="section-subtitle">Reach out to specific departments for specialized inquiries</p>
+                </div>
+
+                <div class="departments-contact">
+                    <div class="dept-contact-card animate-fade-in">
+                        <h3><i class="fas fa-user-md"></i> Pre-Medical Department</h3>
+                        <p class="dept-head">Prof. Sara Ahmed</p>
+                        <div class="dept-contact-info">
+                            <p><i class="fas fa-phone"></i> 042-1234567 Ext. 101</p>
+                            <p><i class="fas fa-envelope"></i> medical@aspirecolleges.edu.pk</p>
+                        </div>
+                    </div>
+
+                    <div class="dept-contact-card animate-fade-in delay-1">
+                        <h3><i class="fas fa-calculator"></i> Pre-Engineering Department</h3>
+                        <p class="dept-head">Prof. Ali Raza</p>
+                        <div class="dept-contact-info">
+                            <p><i class="fas fa-phone"></i> 042-1234567 Ext. 102</p>
+                            <p><i class="fas fa-envelope"></i> engineering@aspirecolleges.edu.pk</p>
+                        </div>
+                    </div>
+
+                    <div class="dept-contact-card animate-fade-in delay-2">
+                        <h3><i class="fas fa-laptop-code"></i> Computer Science Department</h3>
+                        <p class="dept-head">Dr. Hina Malik</p>
+                        <div class="dept-contact-info">
+                            <p><i class="fas fa-phone"></i> 042-1234567 Ext. 103</p>
+                            <p><i class="fas fa-envelope"></i> cs@aspirecolleges.edu.pk</p>
+                        </div>
+                    </div>
+
+                    <div class="dept-contact-card animate-fade-in">
+                        <h3><i class="fas fa-user-tie"></i> Admission Office</h3>
+                        <p class="dept-head">Mr. Kamran Ali</p>
+                        <div class="dept-contact-info">
+                            <p><i class="fas fa-phone"></i> 042-7654321</p>
+                            <p><i class="fas fa-envelope"></i> admissions@aspirecolleges.edu.pk</p>
+                        </div>
+                    </div>
+
+                    <div class="dept-contact-card animate-fade-in delay-1">
+                        <h3><i class="fas fa-money-check-alt"></i> Accounts Department</h3>
+                        <p class="dept-head">Mr. Imran Khan</p>
+                        <div class="dept-contact-info">
+                            <p><i class="fas fa-phone"></i> 042-1234567 Ext. 104</p>
+                            <p><i class="fas fa-envelope"></i> accounts@aspirecolleges.edu.pk</p>
+                        </div>
+                    </div>
+
+                    <div class="dept-contact-card animate-fade-in delay-2">
+                        <h3><i class="fas fa-users"></i> Student Affairs</h3>
+                        <p class="dept-head">Ms. Ayesha Khan</p>
+                        <div class="dept-contact-info">
+                            <p><i class="fas fa-phone"></i> 042-1234567 Ext. 105</p>
+                            <p><i class="fas fa-envelope"></i> studentaffairs@aspirecolleges.edu.pk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact -->
+        <section class="emergency-contact">
+            <div class="container">
+                <div class="emergency-content">
+                    <div class="emergency-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="emergency-info">
+                        <h3>Emergency Contact</h3>
+                        <p>For urgent matters outside office hours</p>
+                        <div class="emergency-number">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+923001234567">0300-1234567</a>
+                        </div>
+                        <p class="emergency-note">Available 24/7 for student emergencies only</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="logo-text">
+                            <div class="logo-main">Aspire Colleges</div>
+                            <div class="logo-sub">Narrowal Campus</div>
+                        </div>
+                    </div>
+                    <p class="footer-description">Excellence in education since 1995. Committed to nurturing future leaders through quality education and modern teaching methodologies.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="campus.html">Campus Map</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Main GT Road, Narrowal, Punjab, Pakistan</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+92 300 1234567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@aspirecolleges.edu.pk</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Fri: 8:00 AM - 4:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates on admissions, events, and more.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-small">
+                            <i class="fas fa-paper-plane"></i> Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aspire Colleges Narrowal Campus. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

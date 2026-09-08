@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Map - Aspire Colleges Narrowal</title>
+    <meta name="description" content="Explore our state-of-the-art campus facilities through interactive maps and virtual tours">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body class="campus-page">
+    <!-- Loading Animation -->
+    <div class="page-transition" id="pageTransition">
+        <div class="loading-logo">
+            <div class="logo-circle">
+                <div class="logo-inner">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="logo-border"></div>
+                <div class="logo-border delay-1"></div>
+                <div class="logo-border delay-2"></div>
+            </div>
+            <div class="loading-text">
+                Aspire Colleges Narrowal Campus
+                <span>Loading Campus Map...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme Selector -->
+    <button class="theme-toggle-btn" id="themeToggleBtn">
+        <i class="fas fa-palette"></i>
+    </button>
+
+    <div class="theme-selector" id="themeSelector">
+        <h3>Select Theme</h3>
+        <div class="theme-colors">
+            <div class="theme-color default" data-theme="default"></div>
+            <div class="theme-color dark" data-theme="dark"></div>
+            <div class="theme-color blue" data-theme="blue"></div>
+            <div class="theme-color purple" data-theme="purple"></div>
+            <div class="theme-color gold" data-theme="gold"></div>
+            <div class="theme-color orange" data-theme="orange"></div>
+            <div class="theme-color red" data-theme="red"></div>
+            <div class="theme-color yellow" data-theme="yellow"></div>
+            <div class="theme-color green" data-theme="green"></div>
+            <div class="theme-color logo" data-theme="logo"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-main">Aspire Colleges</div>
+                    <div class="logo-sub">Narrowal Campus</div>
+                </div>
+            </a>
+
+
+
+
+
+ <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-icon">
+                <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                </svg>
+            </div>
+            <input type="text" class="search-input" id="searchInput" placeholder="Search programs, admissions, faculty..." autocomplete="off">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <!-- Mobile Search Toggle -->
+        <button class="search-toggle" id="searchToggle">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+            </svg>
+        </button>
+
+
+
+
+
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-links" id="navLinks">
+                   <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="campus.html" class="nav-link">Our Campuses </a></li>
+                    <li><a href="programs.html" class="nav-link">Programmes</a></li>
+                    <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                    <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="lifeatcampus.html" class="nav-link">Life At campus</a></li>
+                     <li><a href="news-events.html" class="nav-link">News & Events</a></li>
+                     <li><a href="seed.html" class="nav-link">SEED</a></li>
+                     <li><a href="careers.html" class="nav-link">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <!-- Hero Section -->
+        <section class="hero campus-hero">
+            <div class="container">
+                <div class="hero-content animate-fade-in">
+                    <h1>Campus Map & Facilities</h1>
+                    <p>Explore our state-of-the-art campus through interactive maps and virtual tours</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Map -->
+        <section class="interactive-map section-padding">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Interactive Campus Map</h2>
+                    <p class="section-subtitle">Navigate through our campus facilities</p>
+                </div>
+                
+                <div class="map-container animate-scale-in">
+                    <div id="campusMap"></div>
+                    <div class="map-legend animate-fade-in">
+                        <h4><i class="fas fa-map-signs"></i> Campus Legend</h4>
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <div class="legend-color academic"></div>
+                                <span>Academic Buildings</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color residential"></div>
+                                <span>Residential Halls</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color recreational"></div>
+                                <span>Recreational Areas</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color administrative"></div>
+                                <span>Administrative Offices</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color library"></div>
+                                <span>Library & Research</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color sports"></div>
+                                <span>Sports Facilities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campus Facilities -->
+        <section class="facilities section-padding">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Campus Facilities</h2>
+                    <p class="section-subtitle">State-of-the-art infrastructure for holistic development</p>
+                </div>
+                
+                <div class="facilities-grid">
+                    <!-- Main Academic Block -->
+                    <div class="facility-card animate-fade-in">
+                        <div class="facility-header">
+                            <div class="facility-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Main Academic Block</h3>
+                        </div>
+                        <div class="facility-content">
+                            <p>State-of-the-art classrooms, lecture halls, and faculty offices equipped with modern teaching aids and technology.</p>
+                            <ul class="facility-features">
+                                <li><i class="fas fa-check"></i> 50+ Smart Classrooms</li>
+                                <li><i class="fas fa-check"></i> Advanced Lecture Halls</li>
+                                <li><i class="fas fa-check"></i> Faculty Offices</li>
+                                <li><i class="fas fa-check"></i> Seminar Rooms</li>
+                                <li><i class="fas fa-check"></i> Conference Facilities</li>
+                                <li><i class="fas fa-check"></i> Digital Presentation Systems</li>
+                            </ul>
+                        </div>
+                        <div class="facility-image">
+                            <img src="images/academic-block.jpg" alt="Main Academic Block" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <!-- Science Complex -->
+                    <div class="facility-card animate-fade-in delay-1">
+                        <div class="facility-header">
+                            <div class="facility-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h3>Science Complex</h3>
+                        </div>
+                        <div class="facility-content">
+                            <p>Modern laboratories for Physics, Chemistry, Biology, and Computer Science with advanced equipment and safety features.</p>
+                            <ul class="facility-features">
+                                <li><i class="fas fa-check"></i> Physics Labs</li>
+                                <li><i class="fas fa-check"></i> Chemistry Labs</li>
+                                <li><i class="fas fa-check"></i> Biology Labs</li>
+                                <li><i class="fas fa-check"></i> Computer Labs</li>
+                                <li><i class="fas fa-check"></i> Research Labs</li>
+                                <li><i class="fas fa-check"></i> Safety Equipment</li>
+                            </ul>
+                        </div>
+                        <div class="facility-image">
+                            <img src="images/science-complex.jpg" alt="Science Complex" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <!-- Central Library -->
+                    <div class="facility-card animate-fade-in delay-2">
+                        <div class="facility-header">
+                            <div class="facility-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h3>Central Library</h3>
+                        </div>
+                        <div class="facility-content">
+                            <p>Extensive collection of books, journals, and digital resources with quiet study areas and research facilities.</p>
+                            <ul class="facility-features">
+                                <li><i class="fas fa-check"></i> 50,000+ Books</li>
+                                <li><i class="fas fa-check"></i> Digital Library</li>
+                                <li><i class="fas fa-check"></i> Study Rooms</li>
+                                <li><i class="fas fa-check"></i> Research Stations</li>
+                                <li><i class="fas fa-check"></i> Online Databases</li>
+                                <li><i class="fas fa-check"></i> Reading Areas</li>
+                            </ul>
+                        </div>
+                        <div class="facility-image">
+                            <img src="images/library.jpg" alt="Central Library" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <!-- Sports Complex -->
+                    <div class="facility-card animate-fade-in delay-3">
+                        <div class="facility-header">
+                            <div class="facility-icon">
+                                <i class="fas fa-football-ball"></i>
+                            </div>
+                            <h3>Sports Complex</h3>
+                        </div>
+                        <div class="facility-content">
+                            <p>Comprehensive sports facilities including indoor and outdoor games, gymnasium, and swimming pool.</p>
+                            <ul class="facility-features">
+                                <li><i class="fas fa-check"></i> Cricket Ground</li>
+                                <li><i class="fas fa-check"></i> Football Field</li>
+                                <li><i class="fas fa-check"></i> Basketball Court</li>
+                                <li><i class="fas fa-check"></i> Tennis Court</li>
+                                <li><i class="fas fa-check"></i> Gymnasium</li>
+                                <li><i class="fas fa-check"></i> Swimming Pool</li>
+                            </ul>
+                        </div>
+                        <div class="facility-image">
+                            <img src="images/sports-complex.jpg" alt="Sports Complex" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <!-- Student Center -->
+                    <div class="facility-card animate-fade-in">
+                        <div class="facility-header">
+                            <div class="facility-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Student Center</h3>
+                        </div>
+                        <div class="facility-content">
+                            <p>Hub for student activities, clubs, and organizations with recreational facilities and meeting spaces.</p>
+                            <ul class="facility-features">
+                                <li><i class="fas fa-check"></i> Auditorium</li>
+                                <li><i class="fas fa-check"></i> Cafeteria</li>
+                                <li><i class="fas fa-check"></i> Club Rooms</li>
+                                <li><i class="fas fa-check"></i> Game Room</li>
+                                <li><i class="fas fa-check"></i> Lounge Areas</li>
+                                <li><i class="fas fa-check"></i> Event Spaces</li>
+                            </ul>
+                        </div>
+                        <div class="facility-image">
+                            <img src="images/student-center.jpg" alt="Student Center" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <!-- Hostels -->
+                    <div class="facility-card animate-fade-in delay-1">
+                        <div class="facility-header">
+                            <div class="facility-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3>Student Hostels</h3>
+                        </div>
+                        <div class="facility-content">
+                            <p>Comfortable residential facilities with modern amenities, security, and supportive environment.</p>
+                            <ul class="facility-features">
+                                <li><i class="fas fa-check"></i> Separate Hostels</li>
+                                <li><i class="fas fa-check"></i> Study Rooms</li>
+                                <li><i class="fas fa-check"></i> Common Areas</li>
+                                <li><i class="fas fa-check"></i> Dining Hall</li>
+                                <li><i class="fas fa-check"></i> 24/7 Security</li>
+                                <li><i class="fas fa-check"></i> Wi-Fi Connectivity</li>
+                            </ul>
+                        </div>
+                        <div class="facility-image">
+                            <img src="images/hostels.jpg" alt="Student Hostels" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual Tour -->
+        <section class="virtual-tour section-padding">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>Virtual Campus Tour</h2>
+                    <p class="section-subtitle">Experience our campus from anywhere in the world</p>
+                </div>
+                
+                <div class="tour-container animate-scale-in">
+                    <div class="tour-viewer">
+                        <!-- Placeholder for virtual tour -->
+                        <div class="tour-placeholder">
+                            <i class="fas fa-vr-cardboard"></i>
+                            <h3>360° Virtual Tour</h3>
+                            <p>Explore our campus in immersive 360-degree view</p>
+                            <button class="btn btn-large">
+                                <i class="fas fa-play"></i> Start Virtual Tour
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-controls">
+                        <div class="tour-point active" data-point="entrance">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Main Entrance</span>
+                        </div>
+                        <div class="tour-point" data-point="academic">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Academic Block</span>
+                        </div>
+                        <div class="tour-point" data-point="library">
+                            <i class="fas fa-book"></i>
+                            <span>Central Library</span>
+                        </div>
+                        <div class="tour-point" data-point="sports">
+                            <i class="fas fa-football-ball"></i>
+                            <span>Sports Complex</span>
+                        </div>
+                        <div class="tour-point" data-point="hostels">
+                            <i class="fas fa-home"></i>
+                            <span>Student Hostels</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Directions -->
+        <section class="directions section-padding">
+            <div class="container">
+                <div class="section-title text-center animate-fade-in">
+                    <h2>How to Reach Us</h2>
+                    <p class="section-subtitle">Find your way to Aspire Colleges Narrowal</p>
+                </div>
+                
+                <div class="directions-grid">
+                    <div class="direction-card animate-fade-in">
+                        <div class="direction-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>By Road</h3>
+                        <p>Located on College Road, Near Narrowal Bypass. Easily accessible from Lahore via GT Road.</p>
+                        <ul>
+                            <li><strong>From Lahore:</strong> 2 hours via GT Road</li>
+                            <li><strong>From Islamabad:</strong> 3 hours via Motorway</li>
+                            <li><strong>Parking:</strong> Available for visitors</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="direction-card animate-fade-in delay-1">
+                        <div class="direction-icon">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <h3>Public Transport</h3>
+                        <p>Well-connected through public transport services from major cities.</p>
+                        <ul>
+                            <li><strong>Bus Service:</strong> Regular from Lahore & Islamabad</li>
+                            <li><strong>Local Transport:</strong> Available from Narrowal City</li>
+                            <li><strong>College Bus:</strong> For enrolled students</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="direction-card animate-fade-in delay-2">
+                        <div class="direction-icon">
+                            <i class="fas fa-map-signs"></i>
+                        </div>
+                        <h3>Landmarks</h3>
+                        <p>Easy to locate with prominent landmarks nearby.</p>
+                        <ul>
+                            <li><strong>Near:</strong> Narrowal Bypass</li>
+                            <li><strong>Opposite:</strong> City Park</li>
+                            <li><strong>Adjacent:</strong> Sports Stadium</li>
+                            <li><strong>Behind:</strong> District Hospital</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visit Planning -->
+        <section class="visit-planning section-padding">
+            <div class="container">
+                <div class="planning-card animate-fade-in">
+                    <div class="planning-content">
+                        <h2>Plan Your Visit</h2>
+                        <p>Schedule a campus tour to experience our facilities firsthand</p>
+                        <div class="planning-features">
+                            <div class="feature">
+                                <i class="fas fa-calendar-check"></i>
+                                <div>
+                                    <h4>Schedule Tour</h4>
+                                    <p>Book a guided campus tour</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-user-graduate"></i>
+                                <div>
+                                    <h4>Meet Faculty</h4>
+                                    <p>Interact with our educators</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-question-circle"></i>
+                                <div>
+                                    <h4>Q&A Session</h4>
+                                    <p>Get all your questions answered</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn btn-large">
+                            <i class="fas fa-calendar-alt"></i> Schedule Visit
+                        </a>
+                    </div>
+                    <div class="planning-image">
+                        <img src="images/campus-tour.jpg" alt="Campus Tour" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Aspire Colleges<br><span>Narrowal Campus</span></div>
+                    <p>Premier educational institution committed to nurturing future leaders through academic excellence, character building, and holistic development.</p>
+                    
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="campus.html">Campus Map</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> College Road, Near Narrowal Bypass, Punjab, Pakistan</p>
+                    <p><i class="fas fa-phone-alt"></i> +92 42 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@aspirecolleges.edu.pk</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 4:00 PM</p>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for updates about admissions and events.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-accent">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Aspire Colleges Narrowal Campus. All Rights Reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> for educational excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Campus page specific scripts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize campus map
+            function initCampusMap() {
+                const map = L.map('campusMap').setView([31.4475, 73.7065], 17);
+                
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+                
+                // Add campus building markers
+                const buildings = [
+                    {
+                        name: "Main Academic Block",
+                        lat: 31.4478,
+                        lng: 73.7068,
+                        type: "academic",
+                        icon: "graduation-cap"
+                    },
+                    {
+                        name: "Science Complex",
+                        lat: 31.4472,
+                        lng: 73.7072,
+                        type: "academic",
+                        icon: "flask"
+                    },
+                    {
+                        name: "Central Library",
+                        lat: 31.4476,
+                        lng: 73.7062,
+                        type: "library",
+                        icon: "book"
+                    },
+                    {
+                        name: "Sports Complex",
+                        lat: 31.4468,
+                        lng: 73.7058,
+                        type: "sports",
+                        icon: "football-ball"
+                    },
+                    {
+                        name: "Student Hostels",
+                        lat: 31.4480,
+                        lng: 73.7055,
+                        type: "residential",
+                        icon: "home"
+                    },
+                    {
+                        name: "Administration Block",
+                        lat: 31.4474,
+                        lng: 73.7060,
+                        type: "administrative",
+                        icon: "building"
+                    }
+                ];
+                
+                // Add markers
+                buildings.forEach(building => {
+                    const icon = L.divIcon({
+                        className: 'map-marker',
+                        html: `<i class="fas fa-${building.icon}"></i>`,
+                        iconSize: [40, 40]
+                    });
+                    
+                    const marker = L.marker([building.lat, building.lng], { icon })
+                        .addTo(map)
+                        .bindPopup(`<strong>${building.name}</strong><br>Click for more details`);
+                });
+                
+                // Fit bounds to show all markers
+                const bounds = L.latLngBounds(buildings.map(b => [b.lat, b.lng]));
+                map.fitBounds(bounds, { padding: [50, 50] });
+            }
+            
+            // Initialize map when page loads
+            setTimeout(initCampusMap, 1000);
+            
+            // Virtual tour controls
+            const tourPoints = document.querySelectorAll('.tour-point');
+            tourPoints.forEach(point => {
+                point.addEventListener('click', function() {
+                    tourPoints.forEach(p => p.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Add tour functionality here
+                    console.log(`Switching to: ${this.dataset.point}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life at Campus - Aspire Colleges Narrowal</title>
+    <meta name="description" content="Experience vibrant campus life at Aspire Colleges - Sports, clubs, events, facilities, and student activities for holistic development.">
+    <meta name="keywords" content="campus life, student activities, sports, clubs, events, facilities, hostel, library, labs, Aspire Colleges">
+    <meta name="author" content="Aspire Colleges Narrowal">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Campus Life Specific Styles */
+        :root {
+            --primary-color: #0a4d68;
+            --secondary-color: #088395;
+            --accent-color: #b40808;
+            --gold-color: #dfad3e;
+            --light-bg: #f8f9fa;
+            --dark-color: #333;
+            --text-color: #555;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --success-color: #28a745;
+            --info-color: #17a2b8;
+            --warning-color: #ffc107;
+        }
+        
+        /* Hero Section */
+        .campus-hero {
+            background: linear-gradient(rgba(10, 77, 104, 0.85), rgba(10, 77, 104, 0.9)), 
+                        url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            padding: 150px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .campus-hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            animation: fadeInDown 1s ease;
+        }
+        
+        .campus-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        /* Campus Overview */
+        .campus-overview {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .overview-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border-top: 5px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .overview-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .overview-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--accent-color), var(--gold-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 40px;
+            color: var(--white);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Sports & Activities */
+        .sports-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .sports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .sport-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .sport-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .sport-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .sport-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .sport-card:hover .sport-image img {
+            transform: scale(1.1);
+        }
+        
+        .sport-content {
+            padding: 25px;
+        }
+        
+        .sport-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .sport-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--accent-color);
+            color: var(--white);
+            font-size: 12px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        /* Clubs & Societies */
+        .clubs-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .clubs-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 50px 0 40px;
+        }
+        
+        .club-tab {
+            padding: 12px 30px;
+            background: var(--light-bg);
+            border: 2px solid transparent;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .club-tab.active {
+            background: var(--accent-color);
+            color: var(--white);
+            border-color: var(--accent-color);
+        }
+        
+        .club-tab:hover:not(.active) {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+        
+        .clubs-content {
+            display: none;
+        }
+        
+        .clubs-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .club-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .club-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--gold-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .club-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .club-icon {
+            font-size: 32px;
+            color: var(--gold-color);
+            margin-bottom: 20px;
+        }
+        
+        /* Events Calendar */
+        .events-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+        }
+        
+        .events-section .section-title h2,
+        .events-section .section-subtitle {
+            color: var(--white);
+        }
+        
+        .events-calendar {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            margin-top: 50px;
+        }
+        
+        .calendar-header {
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            background: var(--border-color);
+        }
+        
+        .calendar-day {
+            padding: 15px;
+            text-align: center;
+            background: var(--white);
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .calendar-body {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            background: var(--border-color);
+        }
+        
+        .calendar-cell {
+            padding: 15px;
+            min-height: 100px;
+            background: var(--white);
+            position: relative;
+        }
+        
+        .calendar-cell.event-day {
+            background: #f0f7ff;
+            cursor: pointer;
+        }
+        
+        .calendar-cell.event-day:hover {
+            background: #e3f2fd;
+        }
+        
+        .event-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        
+        /* Facilities */
+        .facilities-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .facility-slider {
+            position: relative;
+            margin-top: 50px;
+        }
+        
+        .facility-slide {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .facility-image {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .facility-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .facility-slide:hover .facility-image img {
+            transform: scale(1.1);
+        }
+        
+        .facility-content {
+            padding: 30px;
+        }
+        
+        .facility-tag {
+            display: inline-block;
+            padding: 5px 15px;
+            background: var(--gold-color);
+            color: var(--white);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        /* Testimonials */
+        .testimonials-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+        
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+            position: relative;
+        }
+        
+        .testimonial-quote {
+            font-size: 60px;
+            color: var(--gold-color);
+            opacity: 0.2;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        
+        .student-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid var(--accent-color);
+            overflow: hidden;
+        }
+        
+        .student-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .student-info h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .student-program {
+            color: var(--text-color);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        /* Gallery */
+        .gallery-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 250px;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            color: var(--white);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .campus-hero h1 {
+                font-size: 3rem;
+            }
+            
+            .overview-grid,
+            .sports-grid,
+            .club-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            .calendar-body,
+            .calendar-days {
+                grid-template-columns: repeat(7, 1fr);
+            }
+            
+            .calendar-cell {
+                padding: 10px;
+                min-height: 80px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .campus-hero {
+                padding: 120px 0 80px;
+            }
+            
+            .campus-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .campus-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .clubs-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .club-tab {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .calendar-body,
+            .calendar-days {
+                grid-template-columns: repeat(7, 1fr);
+                font-size: 14px;
+            }
+            
+            .calendar-cell {
+                padding: 8px;
+                min-height: 70px;
+                font-size: 14px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .campus-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .overview-grid,
+            .sports-grid,
+            .club-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-item {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-main">Aspire Colleges</div>
+                    <div class="logo-sub">Narrowal Campus</div>
+                </div>
+            </a>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-icon">
+                    <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                    </svg>
+                </div>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search campus life, sports, events..." autocomplete="off">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+
+            <!-- Mobile Search Toggle -->
+            <button class="search-toggle" id="searchToggle">
+                <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                    <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                </svg>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navigation -->
+            <nav class="nav">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="campus.html" class="nav-link">Our Campuses </a></li>
+                    <li><a href="programs.html" class="nav-link">Programmes</a></li>
+                    <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                    <li><a href="franchiseprogram.html" class="nav-link ">Franchise Program</a></li>
+                    <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                     <li><a href="lifeatcampus.html" class="nav-link">Life At campus</a></li>
+                     <li><a href="news-events.html" class="nav-link">News & Events</a></li>
+                     <li><a href="seed.html" class="nav-link">SEED</a></li>
+                     <li><a href="careers.html" class="nav-link">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Mobile Search Overlay -->
+        <div class="search-mobile" id="searchMobile">
+            <div class="search-icon">
+                <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                </svg>
+            </div>
+            <input type="text" class="search-input" id="searchInputMobile" placeholder="Search campus life, sports, events..." autocomplete="off">
+            <button class="close-search" id="closeSearch">&times;</button>
+            <div class="search-results" id="searchResultsMobile"></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="campus-hero">
+        <div class="container">
+            <h1>Life at Aspire Colleges</h1>
+            <p>Experience vibrant campus life with state-of-the-art facilities, diverse activities, and endless opportunities for personal growth and development.</p>
+            <div class="hero-btns" style="display: flex; gap: 20px; justify-content: center; margin-top: 40px;">
+                <a href="#campus-tour" class="btn btn-large">Virtual Campus Tour</a>
+                <a href="#events" class="btn btn-large btn-outline">Upcoming Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Overview -->
+    <section class="campus-overview">
+        <div class="container">
+            <div class="section-title">
+                <h2>Campus Life Overview</h2>
+                <p class="section-subtitle">A perfect blend of academic excellence and vibrant campus activities</p>
+            </div>
+            
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Sports & Athletics</h3>
+                    <p>State-of-the-art sports facilities including cricket, football, basketball, and indoor sports.</p>
+                    <div class="stats" style="margin-top: 20px; color: var(--accent-color); font-weight: 600;">
+                        8+ Sports Facilities
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Clubs & Societies</h3>
+                    <p>15+ active student clubs covering technology, arts, debate, literature, and social services.</p>
+                    <div class="stats" style="margin-top: 20px; color: var(--accent-color); font-weight: 600;">
+                        15+ Student Clubs
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Events & Festivals</h3>
+                    <p>Annual cultural fest, tech fest, sports gala, and regular workshops and seminars.</p>
+                    <div class="stats" style="margin-top: 20px; color: var(--accent-color); font-weight: 600;">
+                        50+ Annual Events
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sports & Activities -->
+    <section id="sports" class="sports-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sports & Athletics</h2>
+                <p class="section-subtitle">Nurturing champions through world-class sports facilities and training</p>
+            </div>
+            
+            <div class="sports-grid">
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <img src="https://images.unsplash.com/photo-1577223625818-75bc1f2ac0e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cricket">
+                    </div>
+                    <div class="sport-content">
+                        <span class="sport-tag">Outdoor</span>
+                        <h3>Cricket</h3>
+                        <p>Professional cricket ground with turf pitch, nets practice area, and coaching facilities.</p>
+                        <div class="sport-info" style="margin-top: 15px; color: var(--text-color); font-size: 14px;">
+                            <i class="fas fa-clock"></i> Daily: 3 PM - 6 PM
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Football">
+                    </div>
+                    <div class="sport-content">
+                        <span class="sport-tag">Outdoor</span>
+                        <h3>Football</h3>
+                        <p>Full-size football ground with floodlights for evening matches and practice sessions.</p>
+                        <div class="sport-info" style="margin-top: 15px; color: var(--text-color); font-size: 14px;">
+                            <i class="fas fa-clock"></i> Daily: 4 PM - 7 PM
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <img src="https://images.unsplash.com/photo-1544919982-b61976a0d7ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Basketball">
+                    </div>
+                    <div class="sport-content">
+                        <span class="sport-tag">Outdoor</span>
+                        <h3>Basketball</h3>
+                        <p>Professional basketball court with floodlights and international standard equipment.</p>
+                        <div class="sport-info" style="margin-top: 15px; color: var(--text-color); font-size: 14px;">
+                            <i class="fas fa-clock"></i> Daily: 3 PM - 8 PM
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Badminton">
+                    </div>
+                    <div class="sport-content">
+                        <span class="sport-tag">Indoor</span>
+                        <h3>Badminton</h3>
+                        <p>Air-conditioned badminton courts with professional flooring and competition-grade equipment.</p>
+                        <div class="sport-info" style="margin-top: 15px; color: var(--text-color); font-size: 14px;">
+                            <i class="fas fa-clock"></i> Daily: 8 AM - 10 PM
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <img src="https://images.unsplash.com/photo-1536922246289-88c42f957773?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Table Tennis">
+                    </div>
+                    <div class="sport-content">
+                        <span class="sport-tag">Indoor</span>
+                        <h3>Table Tennis</h3>
+                        <p>Professional table tennis tables with experienced coaches for training and practice.</p>
+                        <div class="sport-info" style="margin-top: 15px; color: var(--text-color); font-size: 14px;">
+                            <i class="fas fa-clock"></i> Daily: 9 AM - 9 PM
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gym & Fitness">
+                    </div>
+                    <div class="sport-content">
+                        <span class="sport-tag">Indoor</span>
+                        <h3>Gym & Fitness</h3>
+                        <p>Modern gym with cardio and weight training equipment, yoga, and aerobics classes.</p>
+                        <div class="sport-info" style="margin-top: 15px; color: var(--text-color); font-size: 14px;">
+                            <i class="fas fa-clock"></i> Daily: 6 AM - 10 PM
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clubs & Societies -->
+    <section class="clubs-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Clubs & Societies</h2>
+                <p class="section-subtitle">Join student-led clubs to explore your passions and develop leadership skills</p>
+            </div>
+            
+            <div class="clubs-tabs">
+                <button class="club-tab active" data-tab="academic">Academic Clubs</button>
+                <button class="club-tab" data-tab="cultural">Cultural Clubs</button>
+                <button class="club-tab" data-tab="technical">Technical Clubs</button>
+                <button class="club-tab" data-tab="sports">Sports Clubs</button>
+                <button class="club-tab" data-tab="social">Social Services</button>
+            </div>
+            
+            <div class="clubs-content active" id="academic-clubs">
+                <div class="club-grid">
+                    <div class="club-card">
+                        <div class="club-icon">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <h3>Debating Society</h3>
+                        <p>Enhance public speaking and critical thinking skills through regular debates and competitions.</p>
+                        <div class="club-meta" style="margin-top: 15px; color: var(--text-color); font-size: 14px;">
+                            <i class="fas fa-users"></i> 45 Members | <i class="fas fa-trophy"></i> 12 Awards
+                        </div>
+                    </div>
+                    
+                    <div class="club-card">
+                        <div class="club-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Literary Society</h3>
+                        <p>Promote reading, writing, and literary appreciation through workshops and competitions.</p>
+                        <div class="club-meta" style="margin-top: 15px; color: var(--text-color); font-size: 14px;">
+                            <i class="fas fa-users"></i> 60 Members | <i class="fas fa-trophy"></i> 8 Awards
+                        </div>
+                    </div>
+                    
+                    <div class="club-card">
+                        <div class="club-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Science Club</h3>
+                        <p>Conduct experiments, science fairs, and research projects under faculty guidance.</p>
+                        <div class="club-meta" style="margin-top: 15px; color: var(--text-color); font-size: 14px;">
+                            <i class="fas fa-users"></i> 85 Members | <i class="fas fa-trophy"></i> 15 Awards
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="clubs-content" id="cultural-clubs">
+                <div class="club-grid">
+                    <div class="club-card">
+                        <div class="club-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Music Society</h3>
+                        <p>Learn various musical instruments and participate in cultural events and competitions.</p>
+                        <div class="club-meta" style="margin-top: 15px; color: var(--text-color); font-size: 14px;">
+                            <i class="fas fa-users"></i> 55 Members
+                        </div>
+                    </div>
+                    
+                    <div class="club-card">
+                        <div class="club-icon">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
+                        <h3>Drama Club</h3>
+                        <p>Participate in theater productions, skits, and drama competitions throughout the year.</p>
+                        <div class="club-meta" style="margin-top: 15px; color: var(--text-color); font-size: 14px;">
+                            <i class="fas fa-users"></i> 40 Members
+                        </div>
+                    </div>
+                    
+                    <div class="club-card">
+                        <div class="club-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Art & Design Club</h3>
+                        <p>Explore various art forms including painting, sketching, calligraphy, and digital art.</p>
+                        <div class="club-meta" style="margin-top: 15px; color: var(--text-color); font-size: 14px;">
+                            <i class="fas fa-users"></i> 50 Members
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="clubs-content" id="technical-clubs">
+                <div class="club-grid">
+                    <div class="club-card">
+                        <div class="club-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Programming Club</h3>
+                        <p>Learn programming languages, participate in hackathons, and develop software projects.</p>
+                        <div class="club-meta" style="margin-top: 15px; color: var(--text-color); font-size: 14px;">
+                            <i class="fas fa-users"></i> 75 Members
+                        </div>
+                    </div>
+                    
+                    <div class="club-card">
+                        <div class="club-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Robotics Club</h3>
+                        <p>Build and program robots, participate in robotics competitions and exhibitions.</p>
+                        <div class="club-meta" style="margin-top: 15px; color: var(--text-color); font-size: 14px;">
+                            <i class="fas fa-users"></i> 35 Members
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Calendar -->
+    <section id="events" class="events-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Events Calendar</h2>
+                <p class="section-subtitle">Stay updated with upcoming events, competitions, and activities</p>
+            </div>
+            
+            <div class="events-calendar">
+                <div class="calendar-header">
+                    <h3 style="margin: 0; color: var(--white);">March 2024</h3>
+                    <p style="margin: 5px 0 0; opacity: 0.9;">Upcoming Events & Activities</p>
+                </div>
+                
+                <div class="calendar-days">
+                    <div class="calendar-day">Sun</div>
+                    <div class="calendar-day">Mon</div>
+                    <div class="calendar-day">Tue</div>
+                    <div class="calendar-day">Wed</div>
+                    <div class="calendar-day">Thu</div>
+                    <div class="calendar-day">Fri</div>
+                    <div class="calendar-day">Sat</div>
+                </div>
+                
+                <div class="calendar-body" id="calendarBody">
+                    <!-- Calendar will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px; text-align: center;">
+                <h3 style="color: var(--white); margin-bottom: 20px;">Major Annual Events</h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 15px 25px; border-radius: 10px; min-width: 200px;">
+                        <div style="font-weight: 600; color: var(--gold-color);">Aspire Fest</div>
+                        <div style="font-size: 14px; opacity: 0.9;">Annual Cultural Festival (April)</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 15px 25px; border-radius: 10px; min-width: 200px;">
+                        <div style="font-weight: 600; color: var(--gold-color);">Tech Expo</div>
+                        <div style="font-size: 14px; opacity: 0.9;">Technology Exhibition (October)</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 15px 25px; border-radius: 10px; min-width: 200px;">
+                        <div style="font-weight: 600; color: var(--gold-color);">Sports Gala</div>
+                        <div style="font-size: 14px; opacity: 0.9;">Annual Sports Competition (November)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities -->
+    <section class="facilities-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Campus Facilities</h2>
+                <p class="section-subtitle">World-class infrastructure for holistic learning and development</p>
+            </div>
+            
+            <div class="facility-slider">
+                <div class="facility-slide">
+                    <div class="facility-image">
+                        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Library">
+                    </div>
+                    <div class="facility-content">
+                        <span class="facility-tag">Academic</span>
+                        <h3>Digital Library</h3>
+                        <p>50,000+ books, digital resources, study rooms, and 24/7 access for students.</p>
+                        <div class="facility-details" style="margin-top: 15px; display: flex; gap: 20px;">
+                            <div style="color: var(--text-color);">
+                                <i class="fas fa-book"></i> 50K+ Books
+                            </div>
+                            <div style="color: var(--text-color);">
+                                <i class="fas fa-wifi"></i> Free WiFi
+                            </div>
+                            <div style="color: var(--text-color);">
+                                <i class="fas fa-clock"></i> 24/7 Access
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px;">
+                <div style="background: var(--light-bg); padding: 25px; border-radius: 10px; border-left: 4px solid var(--accent-color);">
+                    <div style="font-size: 32px; color: var(--accent-color); margin-bottom: 15px;">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h4 style="margin-bottom: 10px;">Cafeteria</h4>
+                    <p style="color: var(--text-color); font-size: 14px;">Hygeinic food with multiple cuisine options at affordable prices.</p>
+                </div>
+                
+                <div style="background: var(--light-bg); padding: 25px; border-radius: 10px; border-left: 4px solid var(--gold-color);">
+                    <div style="font-size: 32px; color: var(--gold-color); margin-bottom: 15px;">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <h4 style="margin-bottom: 10px;">Medical Center</h4>
+                    <p style="color: var(--text-color); font-size: 14px;">24/7 medical facilities with qualified doctor and ambulance service.</p>
+                </div>
+                
+                <div style="background: var(--light-bg); padding: 25px; border-radius: 10px; border-left: 4px solid var(--secondary-color);">
+                    <div style="font-size: 32px; color: var(--secondary-color); margin-bottom: 15px;">
+                        <i class="fas fa-praying-hands"></i>
+                    </div>
+                    <h4 style="margin-bottom: 10px;">Prayer Area</h4>
+                    <p style="color: var(--text-color); font-size: 14px;">Separate prayer rooms for male and female students with proper facilities.</p>
+                </div>
+                
+                <div style="background: var(--light-bg); padding: 25px; border-radius: 10px; border-left: 4px solid var(--primary-color);">
+                    <div style="font-size: 32px; color: var(--primary-color); margin-bottom: 15px;">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h4 style="margin-bottom: 10px;">Transport</h4>
+                    <p style="color: var(--text-color); font-size: 14px;">College transport covering all major routes in the city.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Student Experiences</h2>
+                <p class="section-subtitle">What our students say about campus life at Aspire Colleges</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="student-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Student">
+                    </div>
+                    <div class="student-info">
+                        <h4>Ali Ahmed</h4>
+                        <div class="student-program">Pre-Medical, Batch 2023</div>
+                        <p style="color: var(--text-color); font-style: italic;">
+                            "The campus life at Aspire Colleges is amazing! Between sports, clubs, and academic support, 
+                            there's always something exciting happening. The faculty genuinely cares about our development."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Campus Gallery</h2>
+                <p class="section-subtitle">Explore life at Aspire Colleges through our photo gallery</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Campus Ground">
+                    <div class="gallery-overlay">
+                        <div>
+                            <div style="font-weight: 600;">Main Campus Ground</div>
+                            <div style="font-size: 14px; margin-top: 5px;">Morning Assembly</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sports Event">
+                    <div class="gallery-overlay">
+                        <div>
+                            <div style="font-weight: 600;">Annual Sports Gala</div>
+                            <div style="font-size: 14px; margin-top: 5px;">Football Match</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cultural Event">
+                    <div class="gallery-overlay">
+                        <div>
+                            <div style="font-weight: 600;">Cultural Festival</div>
+                            <div style="font-size: 14px; margin-top: 5px;">Music Performance</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Library">
+                    <div class="gallery-overlay">
+                        <div>
+                            <div style="font-weight: 600;">Digital Library</div>
+                            <div style="font-size: 14px; margin-top: 5px;">Study Session</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Aspire Colleges<br><span>Narrowal Campus</span></div>
+                    <p style="margin-top: 15px;">Experience the vibrant campus life that complements academic excellence at Aspire Colleges.</p>
+                    
+                    <div class="social-icons" style="margin-top: 20px;">
+                        <a href="#" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Campus Life</h3>
+                    <ul>
+                        <li><a href="#sports">Sports Facilities</a></li>
+                        <li><a href="#clubs">Clubs & Societies</a></li>
+                        <li><a href="#events">Events Calendar</a></li>
+                        <li><a href="#facilities">Campus Facilities</a></li>
+                        <li><a href="#gallery">Photo Gallery</a></li>
+                        <li><a href="#testimonials">Student Experiences</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Campus Hours</h3>
+                    <p><i class="fas fa-clock"></i> Monday - Friday: 8:00 AM - 8:00 PM</p>
+                    <p><i class="fas fa-clock"></i> Saturday: 9:00 AM - 4:00 PM</p>
+                    <p><i class="fas fa-clock"></i> Sunday: 10:00 AM - 2:00 PM</p>
+                    <p><i class="fas fa-phone-alt"></i> Campus Office: +92 42 1234567</p>
+                    <p><i class="fas fa-envelope"></i> campuslife@aspirecolleges.edu.pk</p>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Event Updates</h3>
+                    <p>Subscribe to get notifications about upcoming events and activities.</p>
+                    <form class="newsletter-form" id="eventNewsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-accent">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Aspire Colleges Narrowal Campus. All Rights Reserved.</p>
+                <p style="margin-top: 10px;">Experience Excellence, Embrace Opportunities</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script src="search.js"></script>
+    <script>
+        // Campus Life Specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Clubs Tabs Functionality
+            const clubTabs = document.querySelectorAll('.club-tab');
+            const clubsContents = document.querySelectorAll('.clubs-content');
+            
+            clubTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs and contents
+                    clubTabs.forEach(t => t.classList.remove('active'));
+                    clubsContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = this.getAttribute('data-tab');
+                    const content = document.getElementById(`${tabId}-clubs`);
+                    if (content) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+            
+            // Calendar Generation
+            generateCalendar();
+            
+            // Event Form Submission
+            const eventForm = document.getElementById('eventNewsletter');
+            if (eventForm) {
+                eventForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    alert(`Thank you for subscribing! You'll receive event updates at ${email}`);
+                    this.reset();
+                });
+            }
+            
+            // Gallery Image Click
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const imgSrc = this.querySelector('img').src;
+                    const imgAlt = this.querySelector('img').alt;
+                    
+                    // Create lightbox
+                    const lightbox = document.createElement('div');
+                    lightbox.style.cssText = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0,0,0,0.9);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 10000;
+                        cursor: pointer;
+                    `;
+                    
+                    const img = document.createElement('img');
+                    img.src = imgSrc;
+                    img.alt = imgAlt;
+                    img.style.cssText = `
+                        max-width: 90%;
+                        max-height: 90%;
+                        object-fit: contain;
+                        border-radius: 10px;
+                    `;
+                    
+                    lightbox.appendChild(img);
+                    document.body.appendChild(lightbox);
+                    
+                    // Close lightbox on click
+                    lightbox.addEventListener('click', function() {
+                        document.body.removeChild(this);
+                    });
+                });
+            });
+        });
+        
+        function generateCalendar() {
+            const calendarBody = document.getElementById('calendarBody');
+            if (!calendarBody) return;
+            
+            const currentDate = new Date();
+            const currentMonth = currentDate.getMonth();
+            const currentYear = currentDate.getFullYear();
+            
+            // Set to March 2024 for demo
+            const month = 2; // March (0-indexed)
+            const year = 2024;
+            
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+            const daysInMonth = lastDay.getDate();
+            const startingDay = firstDay.getDay();
+            
+            // Clear calendar
+            calendarBody.innerHTML = '';
+            
+            // Add empty cells for days before the first day of month
+            for (let i = 0; i < startingDay; i++) {
+                const emptyCell = document.createElement('div');
+                emptyCell.className = 'calendar-cell';
+                calendarBody.appendChild(emptyCell);
+            }
+            
+            // Add days of the month
+            const events = {
+                5: 'Debate Competition',
+                8: 'Science Exhibition',
+                12: 'Football Match',
+                15: 'Cultural Night',
+                18: 'Career Fair',
+                22: 'Programming Contest',
+                25: 'Sports Day',
+                28: 'Art Exhibition'
+            };
+            
+            for (let day = 1; day <= daysInMonth; day++) {
+                const cell = document.createElement('div');
+                cell.className = 'calendar-cell';
+                cell.innerHTML = `<span style="font-weight: 600;">${day}</span>`;
+                
+                // Add event indicator
+                if (events[day]) {
+                    cell.classList.add('event-day');
+                    cell.innerHTML += '<div class="event-dot"></div>';
+                    
+                    // Add event tooltip
+                    cell.title = events[day];
+                    
+                    // Add click handler for event details
+                    cell.addEventListener('click', function() {
+                        alert(`Event on March ${day}: ${events[day]}`);
+                    });
+                }
+                
+                calendarBody.appendChild(cell);
+            }
+        }
+    </script>
+</body>
+</html>
